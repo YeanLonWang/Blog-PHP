@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+	*{
+		font-size:14px;
+	}
+	table,td,th{
+		border:#CCC solid 1px;
+	}
+	</style>
+</head>
+<body>
+
+
+	<form id="form1" name="form1" method="post" action="">
+  <table width="500" border="1">
+    <tr>
+      <th colspan="2">添加链接</th>
+    </tr>
+    <tr>
+      <td>名称：</td>
+      <td><input type="text" name="link_name" id="link_name" value="{$link_content.link_name}" /></td>
+    </tr>
+    <tr>
+      <td>地址：</td>
+      <td><input type="text" name="link_url" id="link_url" value="{$link_content.link_url}"/></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center"><input type="submit" value="提交" /></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

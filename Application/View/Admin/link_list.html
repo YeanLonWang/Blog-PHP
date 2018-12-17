@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	*{
+		font-size:14px;
+	}
+	table,td,th{
+		border:#CCC solid 1px;
+	}
+	</style>
+</head>
+<body>
+<a href="index.php?p=Admin&c=Link&a=add">添加链接地址</a>
+<table border="1" width="560">
+<tr>
+	<th>编号</th> <th>链接名</th> <th>链接地址</th> <th>修改</th> <th>删除</th>
+</tr>
+{foreach $list as $rows}
+	<tr>
+    	<td>{$rows@iteration}</td>
+        <td>{$rows['link_name']}</td>
+        <td>{$rows['link_url']}</td>
+        <td><a href="index.php?p=Admin&c=Link&a=alter&link_id={$rows['link_id']}">修改</a></td>
+        <td><a href="index.php?p=Admin&c=Link&a=del&link_id={$rows['link_id']}">删除</a></td>
+    </tr>
+{/foreach}
+</body>
+</html>
